@@ -1,0 +1,17 @@
+OASISFormat: 0.4
+Name:        test
+Version:     1.0
+Synopsis:    test
+Authors:     Raman Varabets
+License:     PROP
+Plugins:     META (0.4), DevFiles (0.4)
+BuildTools:  ocamlbuild
+BuildDepends: devkit, extlib, atdgen, yojson, threads, lwt.unix, lwt.preemptive, lwt.ppx, curl.lwt
+OCamlVersion: >= 4.04.0
+AlphaFeatures: ocamlbuild_more_args
+XOCamlbuildPluginTags: package(mybuild)
+Executable test
+  Path:       .
+  BuildTools: ocamlbuild
+  MainIs:     main.ml
+  CompiledObject: native

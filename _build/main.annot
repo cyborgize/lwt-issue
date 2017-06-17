@@ -1,0 +1,2265 @@
+"main.ml" 6 78 82 "main.ml" 6 78 93
+type(
+  int -> ('a -> 'b) -> ('b -> unit) -> 'a Enum.t -> unit
+)
+ident(
+  def run_workers "main.ml" 21 606 606 "main.ml" 1 0 -1
+)
+"main.ml" 6 78 94 "main.ml" 6 78 101
+type(
+  int
+)
+ident(
+  def workers "main.ml" 6 78 102 "main.ml" 19 600 604
+)
+"main.ml" 6 78 121 "main.ml" 6 78 122
+type(
+  t -> u
+)
+ident(
+  def f "main.ml" 6 78 133 "main.ml" 19 600 604
+)
+"main.ml" 6 78 134 "main.ml" 6 78 135
+type(
+  u -> unit
+)
+ident(
+  def g "main.ml" 6 78 149 "main.ml" 19 600 604
+)
+"main.ml" 6 78 149 "main.ml" 6 78 153
+type(
+  t Enum.t
+)
+ident(
+  def enum "main.ml" 7 156 158 "main.ml" 19 600 604
+)
+"main.ml" 7 156 166 "main.ml" 7 156 173
+type(
+  int
+)
+ident(
+  int_ref workers "main.ml" 6 78 94 "main.ml" 6 78 101
+)
+"main.ml" 7 156 174 "main.ml" 7 156 175
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"main.ml" 7 156 176 "main.ml" 7 156 177
+type(
+  int
+)
+"main.ml" 7 156 165 "main.ml" 7 156 178
+type(
+  bool
+)
+"main.ml" 7 156 158 "main.ml" 7 156 178
+type(
+  unit
+)
+"main.ml" 9 246 263 "main.ml" 9 246 285
+call(
+  stack
+)
+"main.ml" 10 289 295 "main.ml" 10 289 301
+type(
+  t -> u
+)
+ident(
+  def worker "main.ml" 15 404 406 "main.ml" 19 600 604
+)
+"main.ml" 10 289 302 "main.ml" 10 289 303
+type(
+  t
+)
+ident(
+  def x "main.ml" 12 351 355 "main.ml" 13 391 398
+)
+"main.ml" 12 351 355 "main.ml" 12 351 370
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  ext_ref Signal.set_exit
+)
+"main.ml" 12 351 371 "main.ml" 12 351 389
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Daemon.signal_exit
+)
+"main.ml" 12 351 355 "main.ml" 12 351 389
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 13 391 395 "main.ml" 13 391 396
+type(
+  t -> u
+)
+ident(
+  int_ref f "main.ml" 6 78 121 "main.ml" 6 78 122
+)
+"main.ml" 13 391 397 "main.ml" 13 391 398
+type(
+  t
+)
+ident(
+  int_ref x "main.ml" 10 289 302 "main.ml" 10 289 303
+)
+"main.ml" 13 391 395 "main.ml" 13 391 398
+call(
+  tail
+)
+type(
+  u
+)
+"main.ml" 12 351 355 "main.ml" 13 391 398
+type(
+  u
+)
+"main.ml" 15 404 410 "main.ml" 15 404 414
+type(
+  W.t
+)
+ident(
+  def proc "main.ml" 16 444 446 "main.ml" 19 600 604
+)
+"main.ml" 15 404 417 "main.ml" 15 404 425
+type(
+  (W.task -> W.result) -> int -> W.t
+)
+ident(
+  ext_ref W.create
+)
+"main.ml" 15 404 426 "main.ml" 15 404 432
+type(
+  W.task -> W.result
+)
+ident(
+  int_ref worker "main.ml" 10 289 295 "main.ml" 10 289 301
+)
+"main.ml" 15 404 433 "main.ml" 15 404 440
+type(
+  int
+)
+ident(
+  int_ref workers "main.ml" 6 78 94 "main.ml" 6 78 101
+)
+"main.ml" 15 404 417 "main.ml" 15 404 440
+call(
+  stack
+)
+type(
+  W.t
+)
+"main.ml" 16 444 446 "main.ml" 16 444 470
+type(
+  exit:bool -> (unit -> unit) -> unit
+)
+ident(
+  ext_ref Nix.handle_sig_exit_with
+)
+"main.ml" 16 444 477 "main.ml" 16 444 481
+type(
+  bool
+)
+"main.ml" 16 444 487 "main.ml" 16 444 489
+type(
+  unit
+)
+"main.ml" 16 444 493 "main.ml" 16 444 499
+type(
+  ?wait:int -> W.t -> unit
+)
+ident(
+  ext_ref W.stop
+)
+"main.ml" 16 444 500 "main.ml" 16 444 504
+type(
+  W.t
+)
+ident(
+  int_ref proc "main.ml" 15 404 410 "main.ml" 15 404 414
+)
+"main.ml" 16 444 493 "main.ml" 16 444 504
+call(
+  tail
+)
+type(
+  unit
+)
+"main.ml" 16 444 482 "main.ml" 16 444 505
+type(
+  unit -> unit
+)
+"main.ml" 16 444 446 "main.ml" 16 444 505
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 17 545 547 "main.ml" 17 545 556
+type(
+  W.t -> ?autoexit:bool -> t Enum.t -> (W.result -> unit) -> unit
+)
+ident(
+  ext_ref W.perform
+)
+"main.ml" 17 545 567 "main.ml" 17 545 571
+type(
+  bool
+)
+"main.ml" 17 545 572 "main.ml" 17 545 576
+type(
+  W.t
+)
+ident(
+  int_ref proc "main.ml" 15 404 410 "main.ml" 15 404 414
+)
+"main.ml" 17 545 577 "main.ml" 17 545 581
+type(
+  t Enum.t
+)
+ident(
+  int_ref enum "main.ml" 6 78 149 "main.ml" 6 78 153
+)
+"main.ml" 17 545 582 "main.ml" 17 545 583
+type(
+  W.result -> unit
+)
+ident(
+  int_ref g "main.ml" 6 78 134 "main.ml" 6 78 135
+)
+"main.ml" 17 545 547 "main.ml" 17 545 583
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 18 585 587 "main.ml" 18 585 593
+type(
+  ?wait:int -> W.t -> unit
+)
+ident(
+  ext_ref W.stop
+)
+"main.ml" 18 585 594 "main.ml" 18 585 598
+type(
+  W.t
+)
+ident(
+  int_ref proc "main.ml" 15 404 410 "main.ml" 15 404 414
+)
+"main.ml" 18 585 587 "main.ml" 18 585 598
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 19 600 602 "main.ml" 19 600 604
+type(
+  unit
+)
+"main.ml" 18 585 587 "main.ml" 19 600 604
+type(
+  unit
+)
+"main.ml" 17 545 547 "main.ml" 19 600 604
+type(
+  unit
+)
+"main.ml" 16 444 446 "main.ml" 19 600 604
+type(
+  unit
+)
+"main.ml" 15 404 406 "main.ml" 19 600 604
+type(
+  unit
+)
+"main.ml" 10 289 291 "main.ml" 19 600 604
+type(
+  unit
+)
+"main.ml" 9 246 248 "main.ml" 19 600 604
+type(
+  unit
+)
+"main.ml" 8 180 182 "main.ml" 19 600 604
+type(
+  unit
+)
+"main.ml" 7 156 158 "main.ml" 19 600 604
+type(
+  unit
+)
+"main.ml" 6 78 111 "main.ml" 19 600 604
+type(
+  (t -> 'b) -> ('b -> unit) -> t Enum.t -> unit
+)
+"main.ml" 6 78 102 "main.ml" 19 600 604
+type(
+  ('a -> 'b) -> ('b -> unit) -> 'a Enum.t -> unit
+)
+"main.ml" 23 625 629 "main.ml" 23 625 644
+type(
+  int -> ('a Lwt_stream.t -> unit Lwt.t) -> 'a Prelude.Enum.t -> unit
+)
+ident(
+  def run_lwt_workers "main.ml" 82 2590 2590 "main.ml" 1 0 -1
+)
+"main.ml" 23 625 645 "main.ml" 23 625 652
+type(
+  int
+)
+ident(
+  def workers "main.ml" 23 625 653 "main.ml" 80 2552 2588
+)
+"main.ml" 23 625 663 "main.ml" 23 625 664
+type(
+  t Lwt_stream.t -> unit Lwt.t
+)
+ident(
+  def f "main.ml" 23 625 697 "main.ml" 80 2552 2588
+)
+"main.ml" 23 625 697 "main.ml" 23 625 701
+type(
+  t Prelude.Enum.t
+)
+ident(
+  def enum "main.ml" 24 704 706 "main.ml" 80 2552 2588
+)
+"main.ml" 24 704 710 "main.ml" 24 704 714
+type(
+  t option Prelude.Enum.t
+)
+ident(
+  def enum "main.ml" 25 802 804 "main.ml" 80 2552 2588
+)
+"main.ml" 24 704 717 "main.ml" 24 704 728
+type(
+  t option Prelude.Enum.t ->
+  t option Prelude.Enum.t -> t option Prelude.Enum.t
+)
+ident(
+  ext_ref Prelude.Enum.append
+)
+"main.ml" 24 704 730 "main.ml" 24 704 738
+type(
+  (t -> t option) -> t Prelude.Enum.t -> t option Prelude.Enum.t
+)
+ident(
+  ext_ref Prelude.Enum.map
+)
+"main.ml" 24 704 744 "main.ml" 24 704 745
+type(
+  t
+)
+ident(
+  def x "main.ml" 24 704 749 "main.ml" 24 704 755
+)
+"main.ml" 24 704 754 "main.ml" 24 704 755
+type(
+  t
+)
+ident(
+  int_ref x "main.ml" 24 704 744 "main.ml" 24 704 745
+)
+"main.ml" 24 704 749 "main.ml" 24 704 755
+type(
+  t option
+)
+"main.ml" 24 704 739 "main.ml" 24 704 756
+type(
+  t -> t option
+)
+"main.ml" 24 704 757 "main.ml" 24 704 761
+type(
+  t Prelude.Enum.t
+)
+ident(
+  int_ref enum "main.ml" 23 625 697 "main.ml" 23 625 701
+)
+"main.ml" 24 704 729 "main.ml" 24 704 762
+call(
+  stack
+)
+type(
+  t option Prelude.Enum.t
+)
+"main.ml" 24 704 764 "main.ml" 24 704 773
+type(
+  int -> (int -> t option) -> t option Prelude.Enum.t
+)
+ident(
+  ext_ref Prelude.Enum.init
+)
+"main.ml" 24 704 774 "main.ml" 24 704 781
+type(
+  int
+)
+ident(
+  int_ref workers "main.ml" 23 625 645 "main.ml" 23 625 652
+)
+"main.ml" 24 704 787 "main.ml" 24 704 788
+type(
+  int
+)
+"main.ml" 24 704 792 "main.ml" 24 704 796
+type(
+  t option
+)
+"main.ml" 24 704 782 "main.ml" 24 704 797
+type(
+  int -> t option
+)
+"main.ml" 24 704 763 "main.ml" 24 704 798
+call(
+  stack
+)
+type(
+  t option Prelude.Enum.t
+)
+"main.ml" 24 704 717 "main.ml" 24 704 798
+call(
+  stack
+)
+type(
+  t option Prelude.Enum.t
+)
+"main.ml" 25 802 808 "main.ml" 25 802 814
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option ref
+)
+ident(
+  def thread "main.ml" 26 829 831 "main.ml" 80 2552 2588
+)
+"main.ml" 25 802 817 "main.ml" 25 802 820
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option ->
+  (Thread.t * t Lwt_stream.bounded_push) option ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"main.ml" 25 802 821 "main.ml" 25 802 825
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option
+)
+"main.ml" 25 802 817 "main.ml" 25 802 825
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option ref
+)
+"main.ml" 26 829 835 "main.ml" 26 829 841
+type(
+  unit Event.event -> unit
+)
+ident(
+  def worker "main.ml" 41 1304 1306 "main.ml" 80 2552 2588
+)
+"main.ml" 26 829 842 "main.ml" 26 829 847
+type(
+  unit Event.event
+)
+ident(
+  def event "main.ml" 27 850 854 "main.ml" 39 1267 1298
+)
+"main.ml" 27 850 854 "main.ml" 27 850 867
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 27 850 868 "main.ml" 27 850 882
+type(
+  string
+)
+"main.ml" 27 850 854 "main.ml" 27 850 882
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 28 884 888 "main.ml" 28 884 900
+type(
+  unit Lwt.t -> unit
+)
+ident(
+  ext_ref Lwt_main.run
+)
+"main.ml" 29 907 913 "main.ml" 29 907 926
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 29 907 927 "main.ml" 29 907 947
+type(
+  string
+)
+"main.ml" 29 907 913 "main.ml" 29 907 947
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 30 949 960 "main.ml" 30 949 966
+type(
+  t Lwt_stream.t
+)
+ident(
+  def stream "main.ml" 31 1007 1013 "main.ml" 37 1236 1257
+)
+"main.ml" 30 949 968 "main.ml" 30 949 972
+type(
+  t Lwt_stream.bounded_push
+)
+ident(
+  def push "main.ml" 31 1007 1013 "main.ml" 37 1236 1257
+)
+"main.ml" 30 949 959 "main.ml" 30 949 973
+type(
+  t Lwt_stream.t * t Lwt_stream.bounded_push
+)
+"main.ml" 30 949 976 "main.ml" 30 949 1001
+type(
+  int -> t Lwt_stream.t * t Lwt_stream.bounded_push
+)
+ident(
+  ext_ref Lwt_stream.create_bounded
+)
+"main.ml" 30 949 1002 "main.ml" 30 949 1003
+type(
+  int
+)
+"main.ml" 30 949 976 "main.ml" 30 949 1003
+call(
+  stack
+)
+type(
+  t Lwt_stream.t * t Lwt_stream.bounded_push
+)
+"main.ml" 31 1007 1013 "main.ml" 31 1007 1019
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option ref
+)
+ident(
+  int_ref thread "main.ml" 25 802 808 "main.ml" 25 802 814
+)
+"main.ml" 31 1007 1020 "main.ml" 31 1007 1022
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option ref ->
+  (Thread.t * t Lwt_stream.bounded_push) option -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"main.ml" 31 1007 1029 "main.ml" 31 1007 1040
+type(
+  unit -> Thread.t
+)
+ident(
+  ext_ref Thread.self
+)
+"main.ml" 31 1007 1041 "main.ml" 31 1007 1043
+type(
+  unit
+)
+"main.ml" 31 1007 1029 "main.ml" 31 1007 1043
+call(
+  stack
+)
+type(
+  Thread.t
+)
+"main.ml" 31 1007 1045 "main.ml" 31 1007 1049
+type(
+  t Lwt_stream.bounded_push
+)
+ident(
+  int_ref push "main.ml" 30 949 968 "main.ml" 30 949 972
+)
+"main.ml" 31 1007 1028 "main.ml" 31 1007 1050
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+"main.ml" 31 1007 1023 "main.ml" 31 1007 1050
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option
+)
+"main.ml" 31 1007 1013 "main.ml" 31 1007 1050
+type(
+  unit
+)
+"main.ml" 32 1052 1058 "main.ml" 32 1052 1071
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 32 1052 1072 "main.ml" 32 1052 1089
+type(
+  string
+)
+"main.ml" 32 1052 1058 "main.ml" 32 1052 1089
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 33 1091 1101 "main.ml" 33 1091 1103
+type(
+  unit
+)
+"main.ml" 33 1091 1106 "main.ml" 33 1091 1116
+type(
+  unit Event.event -> unit
+)
+ident(
+  ext_ref Event.sync
+)
+"main.ml" 33 1091 1117 "main.ml" 33 1091 1122
+type(
+  unit Event.event
+)
+ident(
+  int_ref event "main.ml" 26 829 842 "main.ml" 26 829 847
+)
+"main.ml" 33 1091 1106 "main.ml" 33 1091 1122
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 34 1126 1132 "main.ml" 34 1126 1145
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 34 1126 1146 "main.ml" 34 1126 1162
+type(
+  string
+)
+"main.ml" 34 1126 1132 "main.ml" 34 1126 1162
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 35 1164 1178 "main.ml" 35 1164 1180
+type(
+  unit
+)
+"main.ml" 35 1164 1183 "main.ml" 35 1164 1184
+type(
+  t Lwt_stream.t -> unit Lwt.t
+)
+ident(
+  int_ref f "main.ml" 23 625 663 "main.ml" 23 625 664
+)
+"main.ml" 35 1164 1185 "main.ml" 35 1164 1191
+type(
+  t Lwt_stream.t
+)
+ident(
+  int_ref stream "main.ml" 30 949 960 "main.ml" 30 949 966
+)
+"main.ml" 35 1164 1183 "main.ml" 35 1164 1191
+call(
+  stack
+)
+type(
+  unit Lwt.t
+)
+"main.ml" 35 1164 1170 "main.ml" 35 1164 1191
+type(
+  unit -> unit Lwt.t
+)
+"main.ml" 36 1195 1201 "main.ml" 36 1195 1214
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 36 1195 1215 "main.ml" 36 1195 1234
+type(
+  string
+)
+"main.ml" 36 1195 1201 "main.ml" 36 1195 1234
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 37 1236 1242 "main.ml" 37 1236 1257
+type(
+  unit Lwt.t
+)
+ident(
+  ext_ref Lwt.return_unit
+)
+"main.ml" 36 1195 1201 "main.ml" 37 1236 1257
+type(
+  unit Lwt.t
+)
+"main.ml" 35 1164 1170 "main.ml" 37 1236 1257
+call(
+  stack
+)
+type(
+  unit Lwt.t
+)
+type(
+  unit Lwt.t
+)
+type(
+  unit Lwt.t
+)
+ident(
+  int_ref __ppx_lwt_0 "main.ml" 35 1164 1170 "main.ml" 37 1236 1257
+)
+type(
+  exn -> exn
+)
+type(
+  exn
+)
+type(
+  exn
+)
+ident(
+  int_ref exn "main.ml" 35 1164 1170 "main.ml" 37 1236 1257
+)
+type(
+  exn
+)
+ident(
+  def exn "main.ml" 35 1164 1170 "main.ml" 37 1236 1257
+)
+type(
+  exn
+)
+type(
+  exn
+)
+ident(
+  int_ref exn "main.ml" 35 1164 1170 "main.ml" 37 1236 1257
+)
+type(
+  exn -> exn
+)
+ident(
+  ext_ref Pervasives.raise
+)
+type(
+  exn
+)
+ident(
+  def exn "main.ml" 35 1164 1170 "main.ml" 37 1236 1257
+)
+type(
+  (exn -> exn) -> unit Lwt.t -> (unit -> unit Lwt.t) -> unit Lwt.t
+)
+ident(
+  ext_ref Lwt.backtrace_bind
+)
+type(
+  unit Lwt.t
+)
+ident(
+  def __ppx_lwt_0 "main.ml" 35 1164 1170 "main.ml" 37 1236 1257
+)
+"main.ml" 34 1126 1132 "main.ml" 37 1236 1257
+type(
+  unit Lwt.t
+)
+"main.ml" 33 1091 1097 "main.ml" 37 1236 1257
+type(
+  unit Lwt.t
+)
+"main.ml" 32 1052 1058 "main.ml" 37 1236 1257
+type(
+  unit Lwt.t
+)
+"main.ml" 31 1007 1013 "main.ml" 37 1236 1257
+type(
+  unit Lwt.t
+)
+"main.ml" 30 949 955 "main.ml" 37 1236 1257
+type(
+  unit Lwt.t
+)
+"main.ml" 28 884 901 "main.ml" 38 1258 1265
+type(
+  unit Lwt.t
+)
+"main.ml" 28 884 888 "main.ml" 38 1258 1265
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 39 1267 1271 "main.ml" 39 1267 1284
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 39 1267 1285 "main.ml" 39 1267 1298
+type(
+  string
+)
+"main.ml" 39 1267 1271 "main.ml" 39 1267 1298
+call(
+  tail
+)
+type(
+  unit
+)
+"main.ml" 28 884 888 "main.ml" 39 1267 1298
+type(
+  unit
+)
+"main.ml" 27 850 854 "main.ml" 39 1267 1298
+type(
+  unit
+)
+"main.ml" 41 1304 1310 "main.ml" 41 1304 1316
+type(
+  t option -> unit
+)
+ident(
+  def worker "main.ml" 80 2552 2554 "main.ml" 80 2552 2588
+)
+"main.ml" 42 1328 1339 "main.ml" 42 1328 1340
+type(
+  t
+)
+ident(
+  def x "main.ml" 43 1344 1350 "main.ml" 64 2130 2170
+)
+"main.ml" 42 1328 1334 "main.ml" 42 1328 1340
+type(
+  t option
+)
+"main.ml" 43 1344 1355 "main.ml" 43 1344 1361
+type(
+  Thread.t
+)
+ident(
+  def thread "main.ml" 56 1806 1812 "main.ml" 64 2130 2170
+)
+"main.ml" 43 1344 1363 "main.ml" 43 1344 1367
+type(
+  t Lwt_stream.bounded_push
+)
+ident(
+  def push "main.ml" 56 1806 1812 "main.ml" 64 2130 2170
+)
+"main.ml" 43 1344 1354 "main.ml" 43 1344 1368
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+"main.ml" 44 1371 1385 "main.ml" 44 1371 1386
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option ref ->
+  (Thread.t * t Lwt_stream.bounded_push) option
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"main.ml" 44 1371 1386 "main.ml" 44 1371 1392
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option ref
+)
+ident(
+  int_ref thread "main.ml" 25 802 808 "main.ml" 25 802 814
+)
+"main.ml" 44 1371 1385 "main.ml" 44 1371 1392
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option
+)
+"main.ml" 45 1398 1413 "main.ml" 45 1398 1417
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+ident(
+  def vars "main.ml" 45 1398 1421 "main.ml" 45 1398 1425
+)
+"main.ml" 45 1398 1408 "main.ml" 45 1398 1417
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option
+)
+"main.ml" 45 1398 1421 "main.ml" 45 1398 1425
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+ident(
+  int_ref vars "main.ml" 45 1398 1413 "main.ml" 45 1398 1417
+)
+"main.ml" 46 1426 1436 "main.ml" 46 1426 1440
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option
+)
+"main.ml" 47 1444 1456 "main.ml" 47 1444 1463
+type(
+  [ `Ready ] Event.channel
+)
+ident(
+  def channel "main.ml" 48 1490 1498 "main.ml" 54 1770 1796
+)
+"main.ml" 47 1444 1466 "main.ml" 47 1444 1483
+type(
+  unit -> [ `Ready ] Event.channel
+)
+ident(
+  ext_ref Event.new_channel
+)
+"main.ml" 47 1444 1484 "main.ml" 47 1444 1486
+type(
+  unit
+)
+"main.ml" 47 1444 1466 "main.ml" 47 1444 1486
+call(
+  stack
+)
+type(
+  [ `Ready ] Event.channel
+)
+"main.ml" 48 1490 1502 "main.ml" 48 1490 1507
+type(
+  unit Event.event
+)
+ident(
+  def event "main.ml" 49 1539 1545 "main.ml" 54 1770 1796
+)
+"main.ml" 48 1490 1510 "main.ml" 48 1490 1520
+type(
+  [ `Ready ] Event.channel -> [ `Ready ] -> unit Event.event
+)
+ident(
+  ext_ref Event.send
+)
+"main.ml" 48 1490 1521 "main.ml" 48 1490 1528
+type(
+  [ `Ready ] Event.channel
+)
+ident(
+  int_ref channel "main.ml" 47 1444 1456 "main.ml" 47 1444 1463
+)
+"main.ml" 48 1490 1529 "main.ml" 48 1490 1535
+type(
+  [ `Ready ]
+)
+"main.ml" 48 1490 1510 "main.ml" 48 1490 1535
+call(
+  stack
+)
+type(
+  unit Event.event
+)
+"main.ml" 49 1539 1545 "main.ml" 49 1539 1558
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 49 1539 1559 "main.ml" 49 1539 1574
+type(
+  string
+)
+"main.ml" 49 1539 1545 "main.ml" 49 1539 1574
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 50 1576 1588 "main.ml" 50 1576 1595
+type(
+  Thread.t
+)
+ident(
+  def _thread "main.ml" 51 1628 1634 "main.ml" 54 1770 1796
+)
+"main.ml" 50 1576 1598 "main.ml" 50 1576 1611
+type(
+  (unit Event.event -> unit) -> unit Event.event -> Thread.t
+)
+ident(
+  ext_ref Thread.create
+)
+"main.ml" 50 1576 1612 "main.ml" 50 1576 1618
+type(
+  unit Event.event -> unit
+)
+ident(
+  int_ref worker "main.ml" 26 829 835 "main.ml" 26 829 841
+)
+"main.ml" 50 1576 1619 "main.ml" 50 1576 1624
+type(
+  unit Event.event
+)
+ident(
+  int_ref event "main.ml" 48 1490 1502 "main.ml" 48 1490 1507
+)
+"main.ml" 50 1576 1598 "main.ml" 50 1576 1624
+call(
+  stack
+)
+type(
+  Thread.t
+)
+"main.ml" 51 1628 1634 "main.ml" 51 1628 1647
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 51 1628 1648 "main.ml" 51 1628 1668
+type(
+  string
+)
+"main.ml" 51 1628 1634 "main.ml" 51 1628 1668
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 52 1670 1682 "main.ml" 52 1670 1688
+type(
+  [ `Ready ]
+)
+"main.ml" 52 1670 1691 "main.ml" 52 1670 1701
+type(
+  [ `Ready ] Event.event -> [ `Ready ]
+)
+ident(
+  ext_ref Event.sync
+)
+"main.ml" 52 1670 1703 "main.ml" 52 1670 1716
+type(
+  [ `Ready ] Event.channel -> [ `Ready ] Event.event
+)
+ident(
+  ext_ref Event.receive
+)
+"main.ml" 52 1670 1717 "main.ml" 52 1670 1724
+type(
+  [ `Ready ] Event.channel
+)
+ident(
+  int_ref channel "main.ml" 47 1444 1456 "main.ml" 47 1444 1463
+)
+"main.ml" 52 1670 1702 "main.ml" 52 1670 1725
+call(
+  stack
+)
+type(
+  [ `Ready ] Event.event
+)
+"main.ml" 52 1670 1691 "main.ml" 52 1670 1725
+call(
+  stack
+)
+type(
+  [ `Ready ]
+)
+"main.ml" 53 1729 1735 "main.ml" 53 1729 1748
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 53 1729 1749 "main.ml" 53 1729 1768
+type(
+  string
+)
+"main.ml" 53 1729 1735 "main.ml" 53 1729 1768
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 54 1770 1778 "main.ml" 54 1770 1788
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option ->
+  Thread.t * t Lwt_stream.bounded_push
+)
+ident(
+  ext_ref Option.get
+)
+"main.ml" 54 1770 1789 "main.ml" 54 1770 1790
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option ref ->
+  (Thread.t * t Lwt_stream.bounded_push) option
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"main.ml" 54 1770 1790 "main.ml" 54 1770 1796
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option ref
+)
+ident(
+  int_ref thread "main.ml" 25 802 808 "main.ml" 25 802 814
+)
+"main.ml" 54 1770 1789 "main.ml" 54 1770 1796
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option
+)
+"main.ml" 54 1770 1778 "main.ml" 54 1770 1796
+call(
+  stack
+)
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+"main.ml" 53 1729 1735 "main.ml" 54 1770 1796
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+"main.ml" 52 1670 1678 "main.ml" 54 1770 1796
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+"main.ml" 51 1628 1634 "main.ml" 54 1770 1796
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+"main.ml" 50 1576 1584 "main.ml" 54 1770 1796
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+"main.ml" 49 1539 1545 "main.ml" 54 1770 1796
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+"main.ml" 48 1490 1498 "main.ml" 54 1770 1796
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+"main.ml" 47 1444 1452 "main.ml" 54 1770 1796
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+"main.ml" 44 1371 1379 "main.ml" 54 1770 1796
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+"main.ml" 56 1806 1812 "main.ml" 56 1806 1825
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 56 1806 1826 "main.ml" 56 1806 1844
+type(
+  string
+)
+"main.ml" 56 1806 1812 "main.ml" 56 1806 1844
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 57 1846 1852 "main.ml" 57 1846 1878
+type(
+  (unit -> unit Lwt.t) -> unit
+)
+ident(
+  ext_ref Lwt_preemptive.run_in_main
+)
+"main.ml" 57 1846 1889 "main.ml" 57 1846 1891
+type(
+  unit
+)
+"main.ml" 58 1895 1903 "main.ml" 58 1895 1916
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 58 1895 1917 "main.ml" 58 1895 1936
+type(
+  string
+)
+"main.ml" 58 1895 1903 "main.ml" 58 1895 1936
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 59 1938 1954 "main.ml" 59 1938 1956
+type(
+  unit
+)
+"main.ml" 59 1938 1959 "main.ml" 59 1938 1973
+type(
+  float -> unit Lwt.t
+)
+ident(
+  ext_ref Lwt_unix.sleep
+)
+"main.ml" 59 1938 1974 "main.ml" 59 1938 1977
+type(
+  float
+)
+"main.ml" 59 1938 1959 "main.ml" 59 1938 1977
+call(
+  stack
+)
+type(
+  unit Lwt.t
+)
+"main.ml" 59 1938 1946 "main.ml" 59 1938 1977
+type(
+  unit -> unit Lwt.t
+)
+"main.ml" 60 1981 1997 "main.ml" 60 1981 1999
+type(
+  unit
+)
+"main.ml" 60 1981 2002 "main.ml" 60 1981 2010
+type(
+  unit Lwt.t list -> unit Lwt.t
+)
+ident(
+  ext_ref Lwt.pick
+)
+"main.ml" 60 1981 2013 "main.ml" 60 1981 2017
+type(
+  t Lwt_stream.bounded_push
+)
+ident(
+  int_ref push "main.ml" 43 1344 1363 "main.ml" 43 1344 1367
+)
+"main.ml" 60 1981 2013 "main.ml" 60 1981 2023
+call(
+  stack
+)
+type(
+  t -> unit Lwt.t
+)
+"main.ml" 60 1981 2024 "main.ml" 60 1981 2025
+type(
+  t
+)
+ident(
+  int_ref x "main.ml" 42 1328 1339 "main.ml" 42 1328 1340
+)
+"main.ml" 60 1981 2013 "main.ml" 60 1981 2025
+type(
+  unit Lwt.t
+)
+"main.ml" 60 1981 2027 "main.ml" 60 1981 2043
+type(
+  unit -> unit Lwt.t
+)
+ident(
+  ext_ref Daemon.wait_exit
+)
+"main.ml" 60 1981 2044 "main.ml" 60 1981 2046
+type(
+  unit
+)
+"main.ml" 60 1981 2027 "main.ml" 60 1981 2046
+call(
+  stack
+)
+type(
+  unit Lwt.t
+)
+"main.ml" 60 1981 2011 "main.ml" 60 1981 2049
+type(
+  unit Lwt.t list
+)
+"main.ml" 60 1981 2002 "main.ml" 60 1981 2049
+call(
+  stack
+)
+type(
+  unit Lwt.t
+)
+"main.ml" 60 1981 1989 "main.ml" 60 1981 2049
+type(
+  unit -> unit Lwt.t
+)
+"main.ml" 61 2053 2061 "main.ml" 61 2053 2074
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 61 2053 2075 "main.ml" 61 2053 2093
+type(
+  string
+)
+"main.ml" 61 2053 2061 "main.ml" 61 2053 2093
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 62 2095 2103 "main.ml" 62 2095 2118
+type(
+  unit Lwt.t
+)
+ident(
+  ext_ref Lwt.return_unit
+)
+"main.ml" 61 2053 2061 "main.ml" 62 2095 2118
+type(
+  unit Lwt.t
+)
+"main.ml" 60 1981 1989 "main.ml" 62 2095 2118
+call(
+  tail
+)
+type(
+  unit Lwt.t
+)
+type(
+  unit Lwt.t
+)
+type(
+  unit Lwt.t
+)
+ident(
+  int_ref __ppx_lwt_0 "main.ml" 60 1981 1989 "main.ml" 62 2095 2118
+)
+type(
+  exn -> exn
+)
+type(
+  exn
+)
+type(
+  exn
+)
+ident(
+  int_ref exn "main.ml" 60 1981 1989 "main.ml" 62 2095 2118
+)
+type(
+  exn
+)
+ident(
+  def exn "main.ml" 60 1981 1989 "main.ml" 62 2095 2118
+)
+type(
+  exn
+)
+type(
+  exn
+)
+ident(
+  int_ref exn "main.ml" 60 1981 1989 "main.ml" 62 2095 2118
+)
+type(
+  exn -> exn
+)
+ident(
+  ext_ref Pervasives.raise
+)
+type(
+  exn
+)
+ident(
+  def exn "main.ml" 60 1981 1989 "main.ml" 62 2095 2118
+)
+type(
+  (exn -> exn) -> unit Lwt.t -> (unit -> unit Lwt.t) -> unit Lwt.t
+)
+ident(
+  ext_ref Lwt.backtrace_bind
+)
+type(
+  unit Lwt.t
+)
+ident(
+  def __ppx_lwt_0 "main.ml" 60 1981 1989 "main.ml" 62 2095 2118
+)
+"main.ml" 59 1938 1946 "main.ml" 62 2095 2118
+call(
+  tail
+)
+type(
+  unit Lwt.t
+)
+type(
+  unit Lwt.t
+)
+type(
+  unit Lwt.t
+)
+ident(
+  int_ref __ppx_lwt_0 "main.ml" 59 1938 1946 "main.ml" 62 2095 2118
+)
+type(
+  exn -> exn
+)
+type(
+  exn
+)
+type(
+  exn
+)
+ident(
+  int_ref exn "main.ml" 59 1938 1946 "main.ml" 62 2095 2118
+)
+type(
+  exn
+)
+ident(
+  def exn "main.ml" 59 1938 1946 "main.ml" 62 2095 2118
+)
+type(
+  exn
+)
+type(
+  exn
+)
+ident(
+  int_ref exn "main.ml" 59 1938 1946 "main.ml" 62 2095 2118
+)
+type(
+  exn -> exn
+)
+ident(
+  ext_ref Pervasives.raise
+)
+type(
+  exn
+)
+ident(
+  def exn "main.ml" 59 1938 1946 "main.ml" 62 2095 2118
+)
+type(
+  (exn -> exn) -> unit Lwt.t -> (unit -> unit Lwt.t) -> unit Lwt.t
+)
+ident(
+  ext_ref Lwt.backtrace_bind
+)
+type(
+  unit Lwt.t
+)
+ident(
+  def __ppx_lwt_0 "main.ml" 59 1938 1946 "main.ml" 62 2095 2118
+)
+"main.ml" 58 1895 1903 "main.ml" 62 2095 2118
+type(
+  unit Lwt.t
+)
+"main.ml" 57 1846 1879 "main.ml" 63 2119 2128
+type(
+  unit -> unit Lwt.t
+)
+"main.ml" 57 1846 1852 "main.ml" 63 2119 2128
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 64 2130 2136 "main.ml" 64 2130 2149
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 64 2130 2150 "main.ml" 64 2130 2170
+type(
+  string
+)
+"main.ml" 64 2130 2136 "main.ml" 64 2130 2170
+call(
+  tail
+)
+type(
+  unit
+)
+"main.ml" 57 1846 1852 "main.ml" 64 2130 2170
+type(
+  unit
+)
+"main.ml" 56 1806 1812 "main.ml" 64 2130 2170
+type(
+  unit
+)
+"main.ml" 43 1344 1350 "main.ml" 64 2130 2170
+type(
+  unit
+)
+"main.ml" 65 2171 2177 "main.ml" 65 2171 2181
+type(
+  t option
+)
+"main.ml" 66 2185 2191 "main.ml" 66 2185 2204
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 66 2185 2205 "main.ml" 66 2185 2219
+type(
+  string
+)
+"main.ml" 66 2185 2191 "main.ml" 66 2185 2219
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 67 2221 2239 "main.ml" 67 2221 2240
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option ref ->
+  (Thread.t * t Lwt_stream.bounded_push) option
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"main.ml" 67 2221 2240 "main.ml" 67 2221 2246
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option ref
+)
+ident(
+  int_ref thread "main.ml" 25 802 808 "main.ml" 25 802 814
+)
+"main.ml" 67 2221 2239 "main.ml" 67 2221 2246
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option
+)
+"main.ml" 68 2252 2260 "main.ml" 68 2252 2264
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option
+)
+"main.ml" 68 2252 2268 "main.ml" 68 2252 2270
+type(
+  unit
+)
+"main.ml" 69 2271 2285 "main.ml" 69 2271 2291
+type(
+  Thread.t
+)
+ident(
+  def thread "main.ml" 70 2302 2310 "main.ml" 75 2452 2478
+)
+"main.ml" 69 2271 2293 "main.ml" 69 2271 2297
+type(
+  t Lwt_stream.bounded_push
+)
+ident(
+  def push "main.ml" 70 2302 2310 "main.ml" 75 2452 2478
+)
+"main.ml" 69 2271 2284 "main.ml" 69 2271 2298
+type(
+  Thread.t * t Lwt_stream.bounded_push
+)
+"main.ml" 69 2271 2279 "main.ml" 69 2271 2298
+type(
+  (Thread.t * t Lwt_stream.bounded_push) option
+)
+"main.ml" 70 2302 2310 "main.ml" 70 2302 2336
+type(
+  (unit -> unit Lwt.t) -> unit
+)
+ident(
+  ext_ref Lwt_preemptive.run_in_main
+)
+"main.ml" 70 2302 2347 "main.ml" 70 2302 2349
+type(
+  unit
+)
+"main.ml" 71 2353 2363 "main.ml" 71 2353 2367
+type(
+  t Lwt_stream.bounded_push
+)
+ident(
+  int_ref push "main.ml" 69 2271 2293 "main.ml" 69 2271 2297
+)
+"main.ml" 71 2353 2363 "main.ml" 71 2353 2374
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 72 2376 2386 "main.ml" 72 2376 2401
+type(
+  unit Lwt.t
+)
+ident(
+  ext_ref Lwt.return_unit
+)
+"main.ml" 71 2353 2363 "main.ml" 72 2376 2401
+type(
+  unit Lwt.t
+)
+"main.ml" 70 2302 2337 "main.ml" 73 2402 2413
+type(
+  unit -> unit Lwt.t
+)
+"main.ml" 70 2302 2310 "main.ml" 73 2402 2413
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 74 2415 2423 "main.ml" 74 2415 2436
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 74 2415 2437 "main.ml" 74 2415 2450
+type(
+  string
+)
+"main.ml" 74 2415 2423 "main.ml" 74 2415 2450
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 75 2452 2460 "main.ml" 75 2452 2471
+type(
+  Thread.t -> unit
+)
+ident(
+  ext_ref Thread.join
+)
+"main.ml" 75 2452 2472 "main.ml" 75 2452 2478
+type(
+  Thread.t
+)
+ident(
+  int_ref thread "main.ml" 69 2271 2285 "main.ml" 69 2271 2291
+)
+"main.ml" 75 2452 2460 "main.ml" 75 2452 2478
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 74 2415 2423 "main.ml" 75 2452 2478
+type(
+  unit
+)
+"main.ml" 70 2302 2310 "main.ml" 75 2452 2478
+type(
+  unit
+)
+"main.ml" 67 2221 2227 "main.ml" 76 2479 2488
+type(
+  unit
+)
+"main.ml" 77 2490 2496 "main.ml" 77 2490 2509
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 77 2490 2510 "main.ml" 77 2490 2525
+type(
+  string
+)
+"main.ml" 77 2490 2496 "main.ml" 77 2490 2525
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 78 2527 2533 "main.ml" 78 2527 2538
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"main.ml" 78 2527 2539 "main.ml" 78 2527 2546
+type(
+  exn
+)
+"main.ml" 78 2527 2533 "main.ml" 78 2527 2546
+type(
+  unit
+)
+"main.ml" 77 2490 2496 "main.ml" 78 2527 2546
+type(
+  unit
+)
+"main.ml" 67 2221 2227 "main.ml" 78 2527 2546
+type(
+  unit
+)
+"main.ml" 66 2185 2191 "main.ml" 78 2527 2546
+type(
+  unit
+)
+"main.ml" 41 1304 1319 "main.ml" 78 2527 2546
+type(
+  t option -> unit
+)
+"main.ml" 80 2552 2554 "main.ml" 80 2552 2565
+type(
+  int ->
+  (t option -> unit) -> (unit -> unit) -> t option Prelude.Enum.t -> unit
+)
+ident(
+  int_ref run_workers "main.ml" 6 78 82 "main.ml" 6 78 93
+)
+"main.ml" 80 2552 2566 "main.ml" 80 2552 2573
+type(
+  int
+)
+ident(
+  int_ref workers "main.ml" 23 625 645 "main.ml" 23 625 652
+)
+"main.ml" 80 2552 2574 "main.ml" 80 2552 2580
+type(
+  t option -> unit
+)
+ident(
+  int_ref worker "main.ml" 41 1304 1310 "main.ml" 41 1304 1316
+)
+"main.ml" 80 2552 2581 "main.ml" 80 2552 2583
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Prelude.id
+)
+"main.ml" 80 2552 2584 "main.ml" 80 2552 2588
+type(
+  t option Prelude.Enum.t
+)
+ident(
+  int_ref enum "main.ml" 24 704 710 "main.ml" 24 704 714
+)
+"main.ml" 80 2552 2554 "main.ml" 80 2552 2588
+call(
+  tail
+)
+type(
+  unit
+)
+"main.ml" 41 1304 1306 "main.ml" 80 2552 2588
+type(
+  unit
+)
+"main.ml" 26 829 831 "main.ml" 80 2552 2588
+type(
+  unit
+)
+"main.ml" 25 802 804 "main.ml" 80 2552 2588
+type(
+  unit
+)
+"main.ml" 24 704 706 "main.ml" 80 2552 2588
+type(
+  unit
+)
+"main.ml" 23 625 653 "main.ml" 80 2552 2588
+type(
+  ('a Lwt_stream.t -> unit Lwt.t) -> 'a Prelude.Enum.t -> unit
+)
+"main.ml" 82 2590 2594 "main.ml" 82 2590 2596
+type(
+  unit
+)
+"main.ml" 83 2599 2605 "main.ml" 83 2599 2607
+type(
+  unit
+)
+"main.ml" 83 2599 2610 "main.ml" 83 2599 2622
+type(
+  unit Lwt.t -> unit
+)
+ident(
+  ext_ref Lwt_main.run
+)
+"main.ml" 83 2599 2623 "main.ml" 83 2599 2638
+type(
+  unit Lwt.t
+)
+ident(
+  ext_ref Lwt.return_unit
+)
+"main.ml" 83 2599 2610 "main.ml" 83 2599 2638
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 84 2642 2644 "main.ml" 84 2642 2657
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 84 2642 2658 "main.ml" 84 2642 2676
+type(
+  string
+)
+"main.ml" 84 2642 2644 "main.ml" 84 2642 2676
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 85 2678 2680 "main.ml" 85 2678 2691
+type(
+  int -> (int -> unit) -> (unit -> unit) -> int Enum.t -> unit
+)
+ident(
+  int_ref run_workers "main.ml" 6 78 82 "main.ml" 6 78 93
+)
+"main.ml" 85 2678 2692 "main.ml" 85 2678 2694
+type(
+  int
+)
+"main.ml" 85 2678 2696 "main.ml" 85 2678 2702
+type(
+  (int -> unit, out_channel, unit) format -> int -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"main.ml" 85 2678 2703 "main.ml" 85 2678 2715
+type(
+  (int -> unit, out_channel, unit) format
+)
+"main.ml" 85 2678 2695 "main.ml" 85 2678 2716
+call(
+  stack
+)
+type(
+  int -> unit
+)
+"main.ml" 85 2678 2717 "main.ml" 85 2678 2719
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Prelude.id
+)
+"main.ml" 85 2678 2721 "main.ml" 85 2678 2730
+type(
+  int list -> int Enum.t
+)
+ident(
+  ext_ref ExtLib.List.enum
+)
+"main.ml" 85 2678 2732 "main.ml" 85 2678 2741
+type(
+  int -> (int -> int) -> int list
+)
+ident(
+  ext_ref ExtLib.List.init
+)
+"main.ml" 85 2678 2742 "main.ml" 85 2678 2745
+type(
+  int
+)
+"main.ml" 85 2678 2746 "main.ml" 85 2678 2748
+type(
+  int -> int
+)
+ident(
+  ext_ref Prelude.id
+)
+"main.ml" 85 2678 2731 "main.ml" 85 2678 2749
+call(
+  stack
+)
+type(
+  int list
+)
+"main.ml" 85 2678 2720 "main.ml" 85 2678 2750
+call(
+  stack
+)
+type(
+  int Enum.t
+)
+"main.ml" 85 2678 2680 "main.ml" 85 2678 2750
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 91 2839 2841 "main.ml" 91 2839 2854
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 91 2839 2855 "main.ml" 91 2839 2868
+type(
+  string
+)
+"main.ml" 91 2839 2841 "main.ml" 91 2839 2868
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 92 2870 2876 "main.ml" 92 2870 2880
+type(
+  string Prelude.Enum.t
+)
+ident(
+  def enum "main.ml" 93 2963 2965 "main.ml" 102 3234 3244
+)
+"main.ml" 92 2870 2883 "main.ml" 92 2870 2894
+type(
+  string Prelude.Enum.t -> string Prelude.Enum.t -> string Prelude.Enum.t
+)
+ident(
+  ext_ref Prelude.Enum.append
+)
+"main.ml" 92 2870 2896 "main.ml" 92 2870 2905
+type(
+  string list -> string Prelude.Enum.t
+)
+ident(
+  ext_ref ExtLib.List.enum
+)
+"main.ml" 92 2870 2908 "main.ml" 92 2870 2920
+type(
+  string
+)
+"main.ml" 92 2870 2906 "main.ml" 92 2870 2922
+type(
+  string list
+)
+"main.ml" 92 2870 2895 "main.ml" 92 2870 2923
+call(
+  stack
+)
+type(
+  string Prelude.Enum.t
+)
+"main.ml" 92 2870 2925 "main.ml" 92 2870 2934
+type(
+  int -> (int -> string) -> string Prelude.Enum.t
+)
+ident(
+  ext_ref Prelude.Enum.init
+)
+"main.ml" 92 2870 2935 "main.ml" 92 2870 2938
+type(
+  int
+)
+"main.ml" 92 2870 2940 "main.ml" 92 2870 2947
+type(
+  (int -> string, unit, string) format -> int -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"main.ml" 92 2870 2948 "main.ml" 92 2870 2957
+type(
+  (int -> string, unit, string) format
+)
+"main.ml" 92 2870 2939 "main.ml" 92 2870 2958
+call(
+  stack
+)
+type(
+  int -> string
+)
+"main.ml" 92 2870 2924 "main.ml" 92 2870 2959
+call(
+  stack
+)
+type(
+  string Prelude.Enum.t
+)
+"main.ml" 92 2870 2883 "main.ml" 92 2870 2959
+call(
+  stack
+)
+type(
+  string Prelude.Enum.t
+)
+"main.ml" 93 2963 2965 "main.ml" 93 2963 2978
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 93 2963 2979 "main.ml" 93 2963 2995
+type(
+  string
+)
+"main.ml" 93 2963 2965 "main.ml" 93 2963 2995
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 97 3042 3044 "main.ml" 97 3042 3059
+type(
+  int -> (string Lwt_stream.t -> unit Lwt.t) -> string Prelude.Enum.t -> unit
+)
+ident(
+  int_ref run_lwt_workers "main.ml" 23 625 629 "main.ml" 23 625 644
+)
+"main.ml" 97 3042 3060 "main.ml" 97 3042 3061
+type(
+  int
+)
+"main.ml" 97 3042 3072 "main.ml" 97 3042 3078
+type(
+  string Lwt_stream.t
+)
+ident(
+  def stream "main.ml" 98 3082 3086 "main.ml" 101 3214 3233
+)
+"main.ml" 98 3082 3086 "main.ml" 98 3082 3099
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 98 3082 3100 "main.ml" 98 3082 3118
+type(
+  string
+)
+"main.ml" 98 3082 3086 "main.ml" 98 3082 3118
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 99 3120 3132 "main.ml" 99 3120 3134
+type(
+  unit
+)
+"main.ml" 99 3120 3137 "main.ml" 99 3120 3152
+type(
+  (string -> unit) -> string Lwt_stream.t -> unit Lwt.t
+)
+ident(
+  ext_ref Lwt_stream.iter
+)
+"main.ml" 99 3120 3153 "main.ml" 99 3120 3166
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 99 3120 3167 "main.ml" 99 3120 3173
+type(
+  string Lwt_stream.t
+)
+ident(
+  int_ref stream "main.ml" 97 3042 3072 "main.ml" 97 3042 3078
+)
+"main.ml" 99 3120 3137 "main.ml" 99 3120 3173
+call(
+  stack
+)
+type(
+  unit Lwt.t
+)
+"main.ml" 99 3120 3124 "main.ml" 99 3120 3173
+type(
+  unit -> unit Lwt.t
+)
+"main.ml" 100 3177 3181 "main.ml" 100 3177 3194
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"main.ml" 100 3177 3195 "main.ml" 100 3177 3212
+type(
+  string
+)
+"main.ml" 100 3177 3181 "main.ml" 100 3177 3212
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 101 3214 3218 "main.ml" 101 3214 3233
+type(
+  unit Lwt.t
+)
+ident(
+  ext_ref Lwt.return_unit
+)
+"main.ml" 100 3177 3181 "main.ml" 101 3214 3233
+type(
+  unit Lwt.t
+)
+"main.ml" 99 3120 3124 "main.ml" 101 3214 3233
+call(
+  tail
+)
+type(
+  unit Lwt.t
+)
+type(
+  unit Lwt.t
+)
+type(
+  unit Lwt.t
+)
+ident(
+  int_ref __ppx_lwt_0 "main.ml" 99 3120 3124 "main.ml" 101 3214 3233
+)
+type(
+  exn -> exn
+)
+type(
+  exn
+)
+type(
+  exn
+)
+ident(
+  int_ref exn "main.ml" 99 3120 3124 "main.ml" 101 3214 3233
+)
+type(
+  exn
+)
+ident(
+  def exn "main.ml" 99 3120 3124 "main.ml" 101 3214 3233
+)
+type(
+  exn
+)
+type(
+  exn
+)
+ident(
+  int_ref exn "main.ml" 99 3120 3124 "main.ml" 101 3214 3233
+)
+type(
+  exn -> exn
+)
+ident(
+  ext_ref Pervasives.raise
+)
+type(
+  exn
+)
+ident(
+  def exn "main.ml" 99 3120 3124 "main.ml" 101 3214 3233
+)
+type(
+  (exn -> exn) -> unit Lwt.t -> (unit -> unit Lwt.t) -> unit Lwt.t
+)
+ident(
+  ext_ref Lwt.backtrace_bind
+)
+type(
+  unit Lwt.t
+)
+ident(
+  def __ppx_lwt_0 "main.ml" 99 3120 3124 "main.ml" 101 3214 3233
+)
+"main.ml" 98 3082 3086 "main.ml" 101 3214 3233
+type(
+  unit Lwt.t
+)
+"main.ml" 97 3042 3062 "main.ml" 102 3234 3239
+type(
+  string Lwt_stream.t -> unit Lwt.t
+)
+"main.ml" 102 3234 3240 "main.ml" 102 3234 3244
+type(
+  string Prelude.Enum.t
+)
+ident(
+  int_ref enum "main.ml" 92 2870 2876 "main.ml" 92 2870 2880
+)
+"main.ml" 97 3042 3044 "main.ml" 102 3234 3244
+call(
+  stack
+)
+type(
+  unit
+)
+"main.ml" 93 2963 2965 "main.ml" 102 3234 3244
+type(
+  unit
+)
+"main.ml" 92 2870 2872 "main.ml" 102 3234 3244
+type(
+  unit
+)
+"main.ml" 91 2839 2841 "main.ml" 102 3234 3244
+type(
+  unit
+)
+"main.ml" 85 2678 2680 "main.ml" 102 3234 3244
+type(
+  unit
+)
+"main.ml" 84 2642 2644 "main.ml" 102 3234 3244
+type(
+  unit
+)
+"main.ml" 83 2599 2601 "main.ml" 102 3234 3244
+type(
+  unit
+)
