@@ -4,8 +4,7 @@ open ExtLib
 
 let () =
   let result = Parallel.invoke ((^) "return ") "line 1" in
-  let result = result () in
-  print_endline result;
+  print_endline (result ());
   let result =
     Parallel.invoke begin fun () ->
       let (waiter, wakener) = Lwt.wait () in
@@ -22,5 +21,4 @@ let () =
       "return result"
     end ()
   in
-  let result = result () in
-  print_endline result
+  print_endline (result ())
