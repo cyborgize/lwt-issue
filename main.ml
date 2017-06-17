@@ -8,17 +8,14 @@ let () =
   print_endline result;
   let result =
     Parallel.invoke begin fun () ->
-      let (stream, push) = Lwt_stream.create () in
+      let (waiter, wakener) = Lwt.wait () in
       let thread =
         Thread.create begin fun () ->
-          Lwt_main.run begin
-            Lwt_stream.iter print_endline stream
-          end
+          Lwt_main.run waiter
         end ()
       in
       Lwt_preemptive.run_in_main begin fun () ->
-        push (Some "line 2");
-        push None;
+        Lwt.wakeup wakener ();
         Lwt.return_unit
       end;
       Thread.join thread;
