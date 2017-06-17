@@ -23,15 +23,11 @@ exception Success
 let run_lwt_workers workers (type t) (f : t Lwt_stream.t -> unit Lwt.t) enum =
   let enum = Enum.append (Enum.map (fun x -> Some x) enum) (Enum.init workers (fun _ -> None)) in
   let thread = ref None in
+  let (stream, push) = Lwt_stream.create_bounded 1 in
   let worker event =
     print_endline "start worker";
     Lwt_main.run begin
       print_endline "start lwt_main_run";
-      let (stream, push) = Lwt_stream.create_bounded 1 in
-      thread := Some (Thread.self (), push);
-      print_endline "start sync send";
-      let () = Event.sync event in
-      print_endline "stop sync send";
       let%lwt () = f stream in
       print_endline "stop lwt_main_run";
       Lwt.return_unit
@@ -40,19 +36,10 @@ let run_lwt_workers workers (type t) (f : t Lwt_stream.t -> unit Lwt.t) enum =
   in
   let worker = function
     | Some x ->
-      let (thread, push) =
-        match !thread with
-        | Some vars -> vars
-        | None ->
-        let channel = Event.new_channel () in
-        let event = Event.send channel `Ready in
-      print_endline "create thread";
-        let _thread = Thread.create worker event in
-      print_endline "start sync receive";
-        let `Ready = Event.sync (Event.receive channel) in
-      print_endline "stop sync receive";
-        Option.get !thread
-      in
+      if !thread = None then begin
+        print_endline "create thread";
+        thread := Some (Thread.create worker ());
+      end;
       print_endline "call run_in_main";
       Lwt_preemptive.run_in_main begin fun () ->
         print_endline "start run_in_main";
@@ -66,7 +53,7 @@ let run_lwt_workers workers (type t) (f : t Lwt_stream.t -> unit Lwt.t) enum =
       print_endline "close stream";
       begin match !thread with
       | None -> ()
-      | Some (thread, push) ->
+      | Some thread ->
         Lwt_preemptive.run_in_main begin fun () ->
           push #close;
           Lwt.return_unit

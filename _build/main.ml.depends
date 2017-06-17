@@ -1,1 +1,1 @@
-main.ml: Daemon Enum Event ExtLib List Lwt Lwt_main Lwt_preemptive Lwt_stream Lwt_unix Nix Option Parallel Prelude Printf Signal Thread
+main.ml: Daemon Enum ExtLib List Lwt Lwt_main Lwt_preemptive Lwt_stream Lwt_unix Nix Parallel Prelude Printf Signal Thread
