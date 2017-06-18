@@ -80,23 +80,26 @@ let worker (execute : task Lwt_stream.t -> result Lwt_stream.t) =
     Unix.close main_read; Unix.close main_write;
     Unix.set_close_on_exec child_read;
     Unix.set_close_on_exec child_write;
+    let output = Lwt_io.of_unix_fd ~mode:Lwt_io.Output child_write in
+    let input = Lwt_io.of_unix_fd ~mode:Lwt_io.Input child_read in
+    let (get_task_stream, push) = Lwt_stream.create () in
+    let result_stream =
+      let on_exn exn = log #error ~exn "Parallel.worker failed to unmarshal task"; Lwt.return_unit in
+      let input_stream = input_stream ~on_exn input in
+      Lwt_stream.from begin fun () ->
+        push (Some `GetTask);
+        Lwt_stream.get input_stream
+      end |>
+      execute |>
+      Lwt_stream.map (fun x -> `Result x)
+    in
+    let result_stream =
+      Lwt_stream.append result_stream @@
+      Lwt_stream.from (fun () -> push None; Lwt.return_none)
+    in
     Lwt_main.run begin
-      let output = Lwt_io.of_unix_fd ~mode:Lwt_io.Output child_write in
-      let input = Lwt_io.of_unix_fd ~mode:Lwt_io.Input child_read in
-      let (accept_stream, push) = Lwt_stream.create () in
-      let result_stream =
-        let on_exn exn = log #error ~exn "Parallel.worker failed to unmarshal task"; Lwt.return_unit in
-        input_stream ~on_exn input |>
-        Lwt_stream.filter (fun _ -> push (Some `Accepted); true) |>
-        execute |>
-        Lwt_stream.map (fun x -> `Result x)
-      in
-      let result_stream =
-        Lwt_stream.append result_stream @@
-        Lwt_stream.from (fun () -> push None; Lwt.return_none)
-      in
       let%lwt () =
-        Lwt_stream.choose [ accept_stream; result_stream; ] |>
+        Lwt_stream.choose [ get_task_stream; result_stream; ] |>
         output_stream output
       in
       let%lwt () = exn_lwt_suppress Lwt_io.close input in
@@ -198,11 +201,10 @@ let perform t ?(autoexit=false) tasks =
         | Some x -> output_value cout x
         | None -> exn_lwt_suppress Lwt_io.close cout
       in
-      let start = Lwt_stream.from (fun () -> let%lwt () = output () in Lwt.return_none) in
       let input = input_stream ~on_exn cin in
       let rec next () =
         match%lwt Lwt_stream.get input with
-        | Some `Accepted ->
+        | Some `GetTask ->
           let%lwt () = output () in
           next ()
         | Some (`Result x) ->
@@ -212,7 +214,7 @@ let perform t ?(autoexit=false) tasks =
           let%lwt () = close_ch w in
           Lwt.return_none
       in
-      Some (Lwt_stream.append start (Lwt_stream.from next))
+      Some (Lwt_stream.from next)
     end
   in
   let finish =
@@ -267,9 +269,5 @@ let () =
     end stream |>
     Lwt_stream.iter print_endline
   in
-  Lwt_main.run begin
-    let%lwt () = test_workers 10 in
-    let%lwt () = Lwt_main.yield () in
-    let%lwt () = test_workers 20 in
-    Lwt.return_unit
-  end
+  Lwt_main.run (test_workers 10);
+  Lwt_main.run (test_workers 20)
