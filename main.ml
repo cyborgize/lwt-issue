@@ -4,22 +4,6 @@ open ExtLib
 
 let log = Log.from "main"
 
-(* adapted from Parallel.run_workers *)
-let run_workers workers (type t) (type u) (f : t -> u) (g : u -> unit) enum =
-  assert (workers > 0);
-  let module Worker = struct type task = t type result = u end in
-  let module W = Parallel.Forks(Worker) in
-  let worker x =
-    (* sane signal handler FIXME restore? *)
-    Signal.set_exit Daemon.signal_exit;
-    f x
-  in
-  let proc = W.create worker workers in
-  Nix.handle_sig_exit_with ~exit:true (fun () -> W.stop proc); (* FIXME: output in signal handler *)
-  W.perform ~autoexit:true proc enum g;
-  W.stop proc;
-  ()
-
 exception Success
 
 module type WorkerT = sig
@@ -245,9 +229,6 @@ let run_workers_lwt_stream workers (type t) (type u) (f : t Lwt_stream.t -> u Lw
   W.perform ~autoexit:true proc stream
 
 let () =
-  print_endline "start 10 workers";
-  run_workers 10 (printf "start %d\n") id (List.enum (List.init 100 id));
-  Lwt_main.run (Lwt_main.yield ());
   let test_workers nr =
     let stream =
       Lwt_stream.append (Lwt_stream.of_list [ "first line"; ]) (Lwt_stream.of_list (List.init 100 (sprintf "line %d")))
