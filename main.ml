@@ -234,6 +234,7 @@ let () =
       Lwt_stream.append (Lwt_stream.of_list [ "first line"; ]) (Lwt_stream.of_list (List.init 100 (sprintf "line %d")))
     in
     printf "start %d workers\n" nr;
+    flush stdout;
     run_workers_lwt_stream nr begin fun stream ->
       print_endline "start lwt worker";
       let stream =
